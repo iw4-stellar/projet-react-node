@@ -1,6 +1,7 @@
 const express = require("express");
 const app = require("./app");
-const { sequelize } = require("./models/index");
+const { sequelize } = require("./models/sqlite/index");
+const logger = require("./lib/logger");
 
 const port = process.env.PORT || 8080;
 
@@ -14,7 +15,7 @@ async function init() {
     await sequelize.authenticate();
 
     api.listen(port, () => {
-      console.log(`Listening on port ${port}`);
+      logger.info(`Server started on port ${port}`);
     });
   } catch (error) {
     console.log(error);

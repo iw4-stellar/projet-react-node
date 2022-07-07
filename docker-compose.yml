@@ -1,0 +1,41 @@
+version: '3.6'
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - mongo-data:/data/db
+    working_dir: /data/db
+
+  server:
+    image: node:alpine
+    volumes:
+      - ./server:/home/node/app
+    working_dir: /home/node/app
+    environment:
+      - PORT=3001
+      - MONGO_URL=mongodb://root:password@mongo:27017/app?authSource=admin
+      - JWT_SECRET=mySecret
+    ports:
+      - 3001:3001
+    command: sh -c "npm install --no-update-notifier; npm start --no-update-notifier"
+
+  client:
+    image: node:alpine
+    volumes:
+      - ./client:/home/node/app
+    working_dir: /home/node/app
+    environment:
+      - API_URL=http://localhost:3001/api
+    ports:
+      - 3000:3000
+    command: sh -c "npm install --no-update-notifier; npm run dev --no-update-notifier"
+
+volumes:
+  mongo-data: {}
+  db-data: {}
