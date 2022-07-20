@@ -1,0 +1,29 @@
+version: '3.6'
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      # - ./server/data/db:/data/db
+      - mongo-data:/data/db
+    working_dir: /data/db
+    env_file: .env
+
+  node:
+    image: node:alpine
+    tty: true
+    stdin_open: true
+    entrypoint: node
+    volumes:
+      - .:/home/node/app
+    working_dir: /home/node/app
+    env_file: .env
+    ports:
+      - $SERVER_PORT:$SERVER_PORT
+      - $CLIENT_PORT:$CLIENT_PORT
+      
+volumes:
+  mongo-data: {}
+  db-data: {}
