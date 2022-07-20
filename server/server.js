@@ -3,8 +3,7 @@ const app = require("./app");
 const { sequelize } = require("./models/sqlite/index");
 const logger = require("./lib/logger");
 
-const port = process.env.PORT || 8080;
-
+const port = process.env.SERVER_PORT || 8080;
 const api = express();
 
 api.use("/api", app);

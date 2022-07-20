@@ -1,0 +1,9 @@
+/.npm/
+/build/
+/node_modules/
+/package-lock.json
+/.env
+/.node_repl_history
+/client/node_modules
+/server/node_modules
+/server/data
