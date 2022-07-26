@@ -1,0 +1,39 @@
+.Register {
+    display: inline-grid;
+    gap : 20px;
+    margin: auto;
+    padding : 40px;
+    text-align: left;
+    background-color: #e5e5e566;
+    width: 700px;
+    border-radius: 20px;
+}
+
+input[type="email"], input[type="password"], input[type="text"]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #E8F0FE;
+}
+
+.select-path {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #E8F0FE;
+}
+
+button.register-button {
+    background-color: #00acee;
+    color : white;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    border-radius: 5px;
+
+}
