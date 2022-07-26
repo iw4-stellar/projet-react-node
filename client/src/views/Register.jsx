@@ -57,6 +57,8 @@ function Register(props) {
                         <option value="">Select a pathway</option>
                         <option value="Architecture des Logiciels">Architecture des Logiciels</option>
                         <option value="Ingénierie du Web">Ingénierie du Web</option>
+                        <option value="Ingénierie de la Blockchain">Ingénierie de la Blockchain</option>
+                        <option value="Sécurité Informatique">Sécurité Informatique</option>
                     </select>
 
                     <button className="register-button" type="submit">Register</button>
