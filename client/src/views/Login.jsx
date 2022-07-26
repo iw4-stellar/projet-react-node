@@ -1,3 +1,4 @@
+import "../styles/Login.css";
 import React, { useState } from "react";
 import AuthService from "../services/auth";
 
@@ -25,18 +26,18 @@ function Login(props) {
 	}
 
 	return (
-		<div>
-			<h1>Login</h1>
-			<form onSubmit={handleSubmit}>
-				<div>
+		<div className="login">
+			{/*<h1>Login</h1> */}
+			<form onSubmit={handleSubmit} >
+				<div className="login-form">
 					<label htmlFor="email">Email</label>
-					<input type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} required />
+					<input className ="login-email" type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} required />
 				</div>
-				<div >
+				<div className="login-form">
 					<label htmlFor="password">Password</label>
-					<input type="password" id="password" value={password} onChange={e => setPassword(e.target.value)} required />
+					<input className ="login-password" type="password" id="password" value={password} onChange={e => setPassword(e.target.value)} required />
 				</div>
-				<button type="submit">Login</button>
+				<button className="login-button" type="submit">Login</button>
 				{message && <p>{message}</p>}
 			</form>
 		</div>

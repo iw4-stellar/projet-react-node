@@ -27,14 +27,16 @@ function App() {
 
   return (
     <div className="App">
-      <nav>
-        <Link to="/">StudyPals</Link>
+      <nav className="nav">
+        <div className="title-wrapper">
+          <Link to="/" className="title">StudyPals</Link>
+        </div>
         <div>
-          <ul>
+{/*           <ul>
             <li>
               <Link to="/home">Home</Link>
             </li>
-          </ul>
+          </ul> */}
         </div>
         <hr />
         {currentUser ? (
@@ -50,7 +52,7 @@ function App() {
           </div>
         ) : (
           <div>
-            <ul>
+            <ul className ="log">
               <li>
                 <Link to="/login">Login</Link>
               </li>
