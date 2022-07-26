@@ -26,14 +26,12 @@ function Login(props) {
 	}
 
 	return (
-		<div className="login">
+		<div>
 			{/*<h1>Login</h1> */}
-			<form onSubmit={handleSubmit} >
-				<div className="login-form">
+			<form onSubmit={handleSubmit} className="login-wrap">
+				<div className="login">
 					<label htmlFor="email">Email</label>
 					<input className ="login-email" type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} required />
-				</div>
-				<div className="login-form">
 					<label htmlFor="password">Password</label>
 					<input className ="login-password" type="password" id="password" value={password} onChange={e => setPassword(e.target.value)} required />
 				</div>

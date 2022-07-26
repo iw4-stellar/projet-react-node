@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie');
 body {
     padding: 40px;
     font-size: 18px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: white;
+    color: black;
 }
 
 .log {
@@ -11,9 +14,14 @@ margin-bottom: 40px;
 margin-top: 20px;
 }
 .title-wrapper {
-    font-size: 40px;
+    font-size: 70px;
     text-align: center;
     width: 100%;
-    font-family: 'Helvitica', sans-serif;
+    font-family: 'Cookie', sans-serif;
+    color : #00acee;
 }
 
+.App {
+    text-align: center;
+    padding-bottom: 40px;
+}

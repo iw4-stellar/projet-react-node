@@ -1,3 +1,4 @@
+import "../styles/Register.css";
 import React, { useState } from "react";
 import AuthService from "../services/auth";
 
@@ -33,9 +34,9 @@ function Register(props) {
 
     return (
         <div>
-            <h1>Register</h1>
+            {/*<h1>Register</h1>*/}
             <form onSubmit={onSubmit}>
-                <div>
+                <div className="Register">
                     <label>Email</label>
                     <input type="email" value={user.email} name="email" onChange={(event) => onInputChange(event)} required />
 
@@ -52,13 +53,13 @@ function Register(props) {
                     <input type="text" value={user.lastName} name="lastName" onChange={(event) => onInputChange(event)} required />
 
                     <label>Pathway</label>
-                    <select value={user.pathway} name="pathway" onChange={(event) => onInputChange(event)} required>
+                    <select value={user.pathway} name="pathway" onChange={(event) => onInputChange(event)} required className="select-path">
                         <option value="">Select a pathway</option>
                         <option value="Architecture des Logiciels">Architecture des Logiciels</option>
                         <option value="Ingénierie du Web">Ingénierie du Web</option>
                     </select>
 
-                    <button type="submit">Register</button>
+                    <button className="register-button" type="submit">Register</button>
 
                     {message && <p>{message}</p>}
                 </div>

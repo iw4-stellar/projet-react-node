@@ -1,5 +1,6 @@
-
-.login-wrap {
+.Register {
+    display: inline-grid;
+    gap : 20px;
     margin: auto;
     padding : 40px;
     text-align: left;
@@ -7,26 +8,28 @@
     width: 700px;
     border-radius: 20px;
 }
-.login, .login-wrap {
-    display: inline-grid;
-    gap : 20px;
-}
 
-.login-email, .login-password {
-    padding-left: 10px;
-    font-size: 18px;
-
-}
-input {
+input[type="email"], input[type="password"], input[type="text"]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: #E8F0FE;
 }
 
-button.login-button {
+.select-path {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #E8F0FE;
+}
+
+button.register-button {
     background-color: #00acee;
     color : white;
     padding-top : 10px;
