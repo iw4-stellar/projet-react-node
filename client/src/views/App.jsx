@@ -8,11 +8,15 @@ import Home from "./Home";
 import Register from "./Register";
 import Login from "./Login";
 import Profile from "./Profile";
+import ReactGa from 'react-ga';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(undefined);
 
   useEffect(() => {
+    ReactGa.initialize('G-TYS6VY3YMG');
+    ReactGa.pageview(window.location.pathname + window.location.search);
+
     const user = AuthService.getCurrentUser();
 
     if (user && user.id) {

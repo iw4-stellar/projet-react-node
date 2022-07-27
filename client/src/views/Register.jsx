@@ -62,6 +62,7 @@ function Register(props) {
                     </select>
 
                     <button className="register-button" type="submit">Register</button>
+                    <input type="Submit" value = "Register" className="register-button" />
 
                     {message && <p>{message}</p>}
                 </div>
