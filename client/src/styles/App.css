@@ -1,1 +1,7 @@
+#app {
+  @apply h-screen flex flex-col;
+}
 
+main {
+  @apply flex-1 overflow-y-auto;
+}

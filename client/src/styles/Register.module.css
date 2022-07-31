@@ -1,0 +1,26 @@
+#register {
+}
+
+#register main {
+  @apply flex items-center justify-center py-8;
+}
+
+#form_card {
+  @apply border shadow bg-white w-72;
+}
+
+.form_card__header {
+  @apply p-4;
+}
+
+.form_card__body {
+  @apply p-4 border-b;
+}
+
+.form_card__footer {
+  @apply p-4;
+}
+
+#form {
+  @apply flex flex-col gap-4;
+}

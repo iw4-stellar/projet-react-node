@@ -1,0 +1,3 @@
+#logout {
+  @apply h-screen flex items-center justify-center gap-4;
+}

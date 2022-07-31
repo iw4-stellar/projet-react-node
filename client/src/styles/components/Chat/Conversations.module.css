@@ -1,0 +1,35 @@
+.conversations {
+  @apply h-full flex-1 overflow-y-auto;
+}
+
+.header {
+  @apply p-4;
+}
+
+.title {
+  @apply flex items-center gap-2 text-success;
+}
+
+.title h1 {
+  @apply mb-0;
+}
+
+.subtitle {
+  @apply text-sm text-gray-400;
+}
+
+.list {
+  @apply py-2;
+}
+
+.conversation {
+  @apply block p-4 hover:bg-primary/20;
+}
+
+.conversation__name {
+  @apply font-bold;
+}
+
+.conversation__last_message {
+  @apply text-black/50 text-sm truncate;
+}

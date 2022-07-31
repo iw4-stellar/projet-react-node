@@ -1,0 +1,22 @@
+#profile {
+}
+
+.profile__header {
+  @apply p-4;
+}
+
+.profile__body {
+  @apply p-4;
+}
+
+.heading {
+  @apply flex gap-2 items-center text-secondary mb-2;
+}
+
+.heading h1 {
+  @apply mb-0;
+}
+
+#profile_form {
+  @apply w-72;
+}

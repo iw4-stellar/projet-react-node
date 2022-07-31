@@ -1,3 +1,138 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+}
+
+header {
+  @apply bg-white border-b flex justify-between;
+}
+
+header .brand {
+}
+
+header .actions {
+  @apply flex flex-shrink-0;
+}
+
+#logo {
+  @apply inline-block p-4 font-bold tracking-wide text-primary;
+}
+
+/* Text */
+.h1 {
+  @apply text-2xl font-bold mb-2;
+}
+
+/* Loader */
+.loader {
+  @apply w-10 h-10 border-10 border-t-primary border-l-primary rounded-full animate-spin;
+}
+
+/* Buttons */
+.button {
+  @apply font-semibold p-4 bg-default text-black hover:cursor-pointer;
+}
+
+.button.is-primary {
+  @apply bg-primary text-white;
+}
+
+.button.is-secondary {
+  @apply bg-secondary text-white;
+}
+
+.button.is-success {
+  @apply bg-success text-white;
+}
+
+.button.is-danger {
+  @apply bg-danger text-white;
+}
+
+.button.is-warning {
+  @apply bg-warning text-black;
+}
+
+.button.is-info {
+  @apply bg-info text-black;
+}
+
+/* Button with only an icon */
+.button.is-icon {
+  @apply w-16;
+}
+
+.button.is-icon svg {
+  @apply mx-auto;
+}
+
+/* Button with an icon and text */
+.button.has-icon {
+  @apply flex flex-shrink-0 gap-2;
+}
+
+/* Button with no background */
+.button.is-text {
+  @apply inline-block bg-transparent text-black hover:bg-default text-center;
+}
+
+.button.is-text.is-primary {
+  @apply bg-transparent text-primary hover:bg-primary/20;
+}
+
+.button.is-text.is-secondary {
+  @apply bg-transparent text-secondary hover:bg-secondary/20;
+}
+
+.button.is-text.is-success {
+  @apply bg-transparent text-success hover:bg-success/20;
+}
+
+.button.is-text.is-danger {
+  @apply bg-transparent text-danger hover:bg-danger/20;
+}
+
+.button.is-text.is-warning {
+  @apply bg-transparent text-warning hover:bg-warning/20;
+}
+
+.button.is-text.is-info {
+  @apply bg-transparent text-info hover:bg-info/20;
+}
+
+/* Form */
+.form-group {
+  @apply mb-2;
+}
+
+.form-group label {
+  @apply block mb-1;
+}
+
+/* Input */
+.input.is-text {
+  @apply p-4 border w-full;
+}
+
+.input.is-checkbox {
+  @apply p-4 flex gap-4 items-center;
+}
+
+.input-helper {
+  @apply text-gray-400 my-1;
+}
+
+/* Alert */
+.alert {
+  @apply p-2 bg-default/20 border border-default;
+}
+
+.alert.is-success {
+  @apply bg-success/10 border-success text-success;
+}
+
+.alert.is-danger {
+  @apply bg-danger/10 border-danger text-danger;
+}

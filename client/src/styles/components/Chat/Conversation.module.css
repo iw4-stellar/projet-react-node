@@ -1,0 +1,63 @@
+.conversation {
+  @apply flex-1 flex flex-col bg-primary/20;
+}
+
+.conversation__header {
+  @apply flex items-center bg-white;
+}
+
+.conversation__body {
+  @apply flex-1 border;
+}
+
+.title {
+  @apply px-4 font-bold;
+}
+
+.conversation_skeleton .message_wrapper {
+  @apply flex justify-start;
+}
+
+/* My Message + My Message */
+.conversation_skeleton .message_wrapper.is_me + .message_wrapper.is_me {
+  @apply mt-1;
+}
+
+/* Other Message + Other Message */
+.conversation_skeleton
+  .message_wrapper:not(.is_me)
+  + .message_wrapper:not(.is_me) {
+  @apply mt-1;
+}
+
+/* My Message + Other Message */
+.conversation_skeleton .message_wrapper.is_me + .message_wrapper:not(.is_me),
+.conversation_skeleton .message_wrapper:not(.is_me) + .message_wrapper.is_me {
+  @apply mt-4;
+}
+
+.conversation_skeleton .message_wrapper.is_me {
+  @apply justify-end;
+}
+
+.conversation_skeleton .message {
+  @apply flex-1 bg-white shadow p-2 border rounded-lg;
+
+  max-width: 200px;
+}
+
+.conversation_skeleton .message_wrapper.is_me .message {
+  @apply bg-primary;
+}
+
+.conversation_skeleton .message > div {
+  @apply h-2 w-full bg-default animate-pulse mb-1;
+}
+
+.conversation_skeleton .message_wrapper.is_me .message > div {
+  @apply bg-default/50;
+}
+
+.conversation_skeleton .message > div:last-child {
+  @apply m-0;
+}

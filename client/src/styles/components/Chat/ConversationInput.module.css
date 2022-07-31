@@ -1,0 +1,7 @@
+.conversation_input {
+  @apply flex items-center;
+}
+
+#input {
+  @apply flex-1 p-4 bg-white;
+}
